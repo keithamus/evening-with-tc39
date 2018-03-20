@@ -1,0 +1,741 @@
+@font-face {
+    font-family: 'sintony';
+    src: url('sintony-bold-webfont.woff2') format('woff2'),
+         url('sintony-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  color:#24292e;
+  background-color: #fff;
+}
+
+.reveal {
+  font-family: "sintony", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+::selection {
+  color: #fff;
+  background: #d33682;
+  text-shadow: none; }
+
+::-moz-selection {
+  color: #fff;
+  background: #d33682;
+  text-shadow: none; }
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+.reveal .slides > section.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 133vh;
+  width: 154vw;
+  transform: translate(-38%, -2%);
+  padding: 0;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #0366d6;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 3em; }
+
+.reveal h2 {
+  font-size: 2.11em; }
+
+.reveal h3 {
+  font-size: 1.55em; }
+
+.reveal h4 {
+  font-size: 1em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q,
+.reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #0366d6;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #78b9e6;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #1a6091; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #268bd2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls { right: inherit }
+
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #268bd2; }
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #268bd2; }
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #268bd2; }
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #268bd2; }
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #78b9e6; }
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #78b9e6; }
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #78b9e6; }
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #78b9e6; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #268bd2;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+.hljs {
+ display:block;
+ overflow-x:auto;
+ padding:0.5em;
+ color:#333;
+ background:#f8f8f8
+}
+.hljs-comment,.hljs-quote {
+ color:#998;
+ font-style:italic
+}
+.hljs-keyword,.hljs-selector-tag,.hljs-subst {
+ color:#333;
+ font-weight:bold
+}
+.hljs-number,.hljs-literal,.hljs-variable,.hljs-template-variable,.hljs-tag .hljs-attr {
+ color:#008080
+}
+.hljs-string,.hljs-doctag {
+ color:#d14
+}
+.hljs-title,.hljs-section,.hljs-selector-id {
+ color:#900;
+ font-weight:bold
+}
+.hljs-subst {
+ font-weight:normal
+}
+.hljs-type,.hljs-class .hljs-title {
+ color:#458;
+ font-weight:bold
+}
+.hljs-tag,.hljs-name,.hljs-attribute {
+ color:#000080;
+ font-weight:normal
+}
+.hljs-regexp,.hljs-link {
+ color:#009926
+}
+.hljs-symbol,.hljs-bullet {
+ color:#990073
+}
+.hljs-built_in,.hljs-builtin-name {
+ color:#0086b3
+}
+.hljs-meta {
+ color:#999;
+ font-weight:bold
+}
+.hljs-deletion {
+ background:#fdd
+}
+.hljs-addition {
+ background:#dfd
+}
+.hljs-emphasis {
+ font-style:italic
+}
+.hljs-strong {
+ font-weight:bold
+}
+
+ul.slack-conversation, .slack-conversation {
+  list-style: none;
+  margin: 0;
+}
+
+.slack-conversation li {
+  margin: 0 0 1rem 0;
+  display: flex;
+  width: 700px;
+}
+
+.slack-conversation .channel {
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+.slack-conversation dl {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.slack-conversation dt {
+  display: flex;
+  align-items: center;
+}
+
+.slack-conversation dd {
+  margin: 0;
+}
+
+.slack-conversation .reactions {
+  margin: 1rem 0;
+}
+
+.slack-conversation .reactions li{
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 4px;
+  display: inline;
+}
+
+.slack-conversation li img {
+  width: 4vh;
+  height: 4vh;
+  border: 0;
+  margin: 0 1rem 0 0;
+}
+
+.slack-conversation dt .time, .slack-conversation .topic {
+  margin-left: 1em;
+  color: #666;
+  font-size: 75%;
+}
+
+.slack-conversation dd code {
+  color: #ea4a5a;
+  border: 1px solid #d1d5da;
+  background-color: #f6f8fa;
+  padding: 2px;
+}
+
+.slack-conversation dd .mention {
+  color: #005cc5;
+  background-color: #dbedff;
+  padding: 2px;
+}
+
+ul.github-conversation {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  list-style: none;
+  margin: 0;
+}
+
+.github-conversation li {
+  margin: 0 0 1rem 0;
+  display: flex;
+}
+
+.github-conversation dl {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.github-conversation dt {
+  display: flex;
+  align-items: center;
+}
+
+.github-conversation dd {
+  margin: 0;
+  padding: 15px;
+  font-weight: normal;
+}
+
+.github-conversation li img {
+  width: 4vh;
+  height: 4vh;
+  border: 0;
+  margin: 0 1rem 0 0;
+}
+
+.github-conversation li dl {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #d1d5da;
+  border-top-color: rgb(209, 213, 218);
+  border-right-color: rgb(209, 213, 218);
+  border-bottom-color: rgb(209, 213, 218);
+  border-left-color: rgb(209, 213, 218);
+  border-radius: 3px;
+  width: 500px;
+}
+
+.github-conversation li dl:before {
+  position: absolute;
+  top: 11px;
+  right: 100%;
+  left: -6px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  content: " ";
+  border: 1px solid #c0d3eb;
+  transform: rotate(45deg);
+  background-color: #f1f8ff;
+  border-top: 0;
+  border-right: 0;
+}
+
+.github-conversation li dt {
+  display: flex;
+  background-color: #f1f8ff;
+  border-bottom-color: #c0d3eb;
+  padding: 10px 15px;
+  color: #586069;
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #d1d5da;
+  border-bottom-color: rgb(209, 213, 218);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.github-conversation li dt svg {
+  margin-left: 9px;
+  fill: currentColor;
+}
+
+.github-conversation li dt svg:nth-of-type(2) {
+  margin-left: 2px;
+}
+
+.github-conversation dt .label {
+  margin: -1px 5px;
+  font-weight: 400;
+  padding: 0 3px;
+  color: #586069;
+  background-color: transparent;
+  border: 1px solid rgba(27,31,35,0.15);
+  box-shadow: none;
+}
+
+.github-conversation dt .time {
+  flex: 1;
+  margin-left: 1em;
+  font-weight: normal;
+}
+
+.github-conversation dd code {
+  color: #ea4a5a;
+  border: 1px solid #d1d5da;
+  background-color: #f6f8fa;
+  padding: 2px;
+}
+
+.github-conversation dd .mention {
+  font-weight: bold;
+  white-space: nowrap;
+  color: #24292e;
+}
+
+.github-conversation dl.blob-wrapper {
+  width: 470px;
+  margin-bottom: 10px;
+}
+
+.github-conversation dl.blob-wrapper:before {
+  display: none
+}
+
+.github-conversation dl.blob-wrapper dt {
+  font-weight: normal;
+  flex-direction: column;
+  align-items: left;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+}
+
+.github-conversation dl.blob-wrapper dd {
+  padding: 0;
+}
+
+.github-conversation dl.blob-wrapper .summary {
+  font-size: 0.7rem;
+  margin: 5px 0 0;
+}
+
+.github-conversation dl.blob-wrapper pre {
+  display: inline;
+  box-shadow: none;
+  width: auto;
+  margin: 0;
+  padding: 4px;
+  font-size: 0.7rem;
+}
+
+.github-conversation dl.blob-wrapper dd pre {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.github-conversation dl.blob-wrapper dd code {
+  border: 0;
+  background: none;
+}
+
+.github-conversation dl.blob-wrapper dd code mark {
+  padding: 0 2rem;
+  color: rgba(27, 31, 35, 0.3);
+  background: none;
+}
+
+.git-repo {
+  display: flex;
+  align-items: center;
+}
+
+.git-repo a {
+  margin: 0 1rem;
+}
+
+.github-file[class] {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  position: relative;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: white;
+  overflow: hidden;
+}
+
+.github-file header {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #e1e4e8;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.github-file header .stats {
+  font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: left;
+  flex: 2;
+}
+
+.github-file header .separator {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  margin: 0 1rem;
+  vertical-align: middle;
+  background-color: #ddd;
+}
+
+.github-file header .buttons {
+  list-style: none;
+  margin: 0 0.5rem;
+  display: flex;
+}
+
+.github-file header .buttons li {
+  color: #24292e;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  background-color: #eff3f6;
+  background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
+  background-repeat: repeat-x;
+  background-position: -1px -1px;
+  background-size: 110% 110%;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.github-file header .buttons li:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right-width: 0px;
+}
+
+.github-file header .buttons li:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-left-width: 0px;
+}
+
+.github-file header svg {
+  margin: 0 0.5rem;
+}
+
+.github-file .contents pre {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  font-size: 1.3rem;
+}
+
+.github-file .contents code {
+  background: none;
+  font-weight: normal;
+  max-height: none;
+}
+
+.github-file .contents .lno {
+  color: rgba(27,31,35,0.3);
+  width: 2rem;
+  display: inline-block;
+  text-align: right;
+  padding: 0 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.github-file [data-markdown] {
+  text-align: left;
+  padding: 2rem;
+  font-size: 1rem;
+  font-weight: normal;
+  background: white;
+}
+
+.github-file [data-markdown] h1,
+.github-file [data-markdown] h2,
+.github-file [data-markdown] h3,
+.github-file [data-markdown] h4,
+.github-file [data-markdown] h5 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #24292e;
+}
+
+.github-file [data-markdown] h1 {
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.github-file [data-markdown] h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.github-file [data-markdown] h3 {
+  font-size: 1.25em;
+}

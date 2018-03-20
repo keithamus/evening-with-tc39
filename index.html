@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/reveal.css">
+    <link rel="stylesheet" type="text/css" href="css/github.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" type="application/javascript" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>An Evening with TC39 in London</h2>
+          <h4 class="fragment">Thanks Facebook for hosting!</h4>
+        </section>
+
+        <section>
+          <h2>Why we're here</h2>
+        </section>
+
+        <section>
+          <h2>Get Involved</h2>
+          <ul>
+            <li class="git-repo">
+              <svg height="32" viewBox="0 0 12 16" style="fill:#959da5"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+              <a href="http://github.com/tc39">tc39</a>/<a href="http://github.com/tc39/proposals">proposals</a>
+            </li>
+            <li class="git-repo">
+              <svg height="32" viewBox="0 0 12 16" style="fill:#959da5"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+              <a href="http://github.com/tc39">tc39</a>/<a href="http://github.com/tc39/agendas">agendas</a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Membership</h2>
+          <h4>Browser Vendors</h4>
+          <h4>Engine Implementers</h4>
+          <h4>Interested Parties</h4>
+          <h4>Users!</h4>
+        </section>
+
+        <section>
+          <h2>Q&amp;A</h2>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        history: true,
+        controls: false,
+        defaultTiming: 120,
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
